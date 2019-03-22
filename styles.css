@@ -3,3 +3,70 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+	background-color: rgb(245,230, 223);
+}
+
+h1 {
+	font-family: "Pacifico", cursive;
+	text-align: center; 
+	padding-bottom: 20px;
+}
+
+h2, h3 {
+	font-family: "Caveat", cursive;
+  	text-align: center;
+  	color: rgb(245,230, 223);
+  	padding-bottom: 10px;
+}
+
+.main-container {
+	display: flex;
+	align-items: center;
+}
+
+.post-container {
+	font-family: "Lato", sans-serif;
+	text-align: justify;
+	color: rgb(245,230, 223);
+	background-color: pink;
+	height: 60%;
+	width: 70%;
+	padding: 30px;
+	margin: 0 auto; 
+}
+
+.post-container:not(:nth-child(2)) {
+	flex-grow: 1;
+	background-color: purple;
+}
+
+.post-container: nth-child(2) {
+	flex-grow: 2;
+	background-color: purple;
+}
+
+@media screen and (min-width: 667px) {
+  .post-container {
+  	font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+	.main-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: flex;
+	}
+
+	.post-container:not(:nth-child(2)) {
+		order: 2;
+		width: 45%;
+	}
+
+	.post-container:nth-child(2) {
+		order: 3;
+		
+	}
+}
